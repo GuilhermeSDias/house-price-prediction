@@ -159,7 +159,8 @@ Excluir seus recursos de computação garante que sua assinatura não será cobr
 
 ---
 
->Este guia fornece uma visão geral do processo de criação, treinamento, implantação e teste de um modelo de previsão usando o **Azure Machine Learning**. _Siga os passos cuidadosamente para garantir uma implementação bem-sucedida_.
+ℹ️ Este guia fornece uma visão geral do processo de criação, treinamento, implantação e teste de um modelo de previsão usando o Azure Machine Learning. Siga os passos cuidadosamente para garantir uma implementação bem-sucedida.
 
->Extraído e adaptado do material oficial do **Microsoft Learn**:
->[https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/01-machine-learning.html](Explore o Machine Learning automatizado no Azure Machine Learning).
+📚 Extraído e adaptado do material oficial do Microsoft Learn:
+
+🌐 [Explore o Machine Learning automatizado no Azure Machine Learning](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/01-machine-learning.html)
