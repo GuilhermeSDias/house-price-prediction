@@ -89,15 +89,77 @@ Implante o modelo usando um endpoint em tempo real.
 
 3. Para testar o serviço implantado, acesse a aba **Testar** do endpoint em tempo real e insira os dados de entrada no formato JSON fornecido.
 
+## 4.1 🧪 Testar o Serviço Implantado
+
+Agora você pode testar seu serviço implantado.
+
+1. No Azure Machine Learning studio, no menu à esquerda, selecione **Endpoints** e abra o endpoint em tempo real `predict-rentals`.
+
+2. Na página do endpoint `predict-rentals`, acesse a aba **Testar**.
+
+3. No painel de dados de entrada para testar o endpoint, substitua o JSON de modelo pelos seguintes dados de entrada:
+
+```json
+   {
+     "input_data": {
+       "columns": [
+         "day",
+         "mnth",
+         "year",
+         "season",
+         "holiday",
+         "weekday",
+         "workingday",
+         "weathersit",
+         "temp",
+         "atemp",
+         "hum",
+         "windspeed"
+       ],
+       "index": [0],
+       "data": [[1,1,2022,2,0,1,1,2,0.3,0.3,0.3,0.3]]
+     }
+   }
+```
+
+4. Clique no botão **Testar**.
+
+5. Revise os resultados do teste, que incluem um número previsto de aluguéis com base nas características de entrada, semelhante a:
+
+```json
+[
+  352.3564674945718
+]
+```
+
+O painel de teste utilizou os dados de entrada e o modelo que você treinou para retornar o número previsto de aluguéis.
+
+Vamos revisar o que você fez:
+
+* Você usou um conjunto de dados de aluguel de bicicletas históricos para treinar um modelo.
+* O modelo prevê o número de aluguéis de bicicletas esperados em um determinado dia, com base em características sazonais e meteorológicas.
+
 ## 5. 🧹 Limpeza
+
+O serviço web que você criou está hospedado em uma Instância de Contêiner do Azure. Se você não pretende mais utilizá-lo, deve excluir o endpoint para evitar cobranças desnecessárias no Azure.
 
 Para evitar cobranças desnecessárias, exclua o endpoint e, se necessário, o workspace do Azure Machine Learning.
 
 ### 📖 Passos:
 
-1. No Azure Machine Learning studio, na aba **Endpoints**, selecione o endpoint e exclua-o.
+1. No Azure Machine Learning studio, na aba **Endpoints**, selecione o endpoint `predict-rentals`. Em seguida, selecione **Excluir** e confirme que deseja excluir o endpoint.
 2. No portal do Azure, exclua o grupo de recursos associado ao workspace, se não for mais necessário.
+
+Excluir seus recursos de computação garante que sua assinatura não será cobrada por recursos de computação. No entanto, você ainda será cobrado por uma pequena quantidade de armazenamento de dados enquanto o workspace do Azure Machine Learning existir em sua assinatura. Se você terminou de explorar o Azure Machine Learning, pode excluir o workspace e os recursos associados.
+
+### 🗑️ Para excluir seu workspace:
+
+1. No portal do Azure, na página de **Grupos de recursos**, abra o grupo de recursos que você especificou ao criar seu workspace do Azure Machine Learning.
+2. Clique em **Excluir grupo de recursos**, digite o nome do grupo de recursos para confirmar que deseja excluí-lo e selecione **Excluir**.
 
 ---
 
-Este guia fornece uma visão geral do processo de criação, treinamento, implantação e teste de um modelo de previsão usando o Azure Machine Learning. Siga os passos cuidadosamente para garantir uma implementação bem-sucedida.
+>Este guia fornece uma visão geral do processo de criação, treinamento, implantação e teste de um modelo de previsão usando o **Azure Machine Learning**. _Siga os passos cuidadosamente para garantir uma implementação bem-sucedida_.
+
+>Extraído e adaptado do material oficial do **Microsoft Learn**:
+>[https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/01-machine-learning.html](Explore o Machine Learning automatizado no Azure Machine Learning).
