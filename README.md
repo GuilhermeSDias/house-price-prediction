@@ -2,11 +2,11 @@
 
 Este guia fornece um passo a passo para criar um modelo de previsão usando o Azure Machine Learning. O exemplo utiliza dados históricos de aluguel de bicicletas para prever o número de aluguéis esperados em um determinado dia, com base em características sazonais e meteorológicas.
 
-## 1. Criar um Workspace no Azure Machine Learning
+## 1. 🏗️ Criar um Workspace no Azure Machine Learning
 
 Para usar o Azure Machine Learning, é necessário provisionar um workspace na sua assinatura do Azure.
 
-### Passos:
+### 📖 Passos:
 
 1. Acesse o [portal do Azure](https://portal.azure.com) com suas credenciais Microsoft.
 2. Selecione **+ Criar um recurso**, procure por **Machine Learning** e crie um novo recurso com as seguintes configurações:
@@ -20,11 +20,11 @@ Para usar o Azure Machine Learning, é necessário provisionar um workspace na s
 3. Selecione **Revisar + criar** e depois **Criar**. Aguarde a criação do workspace e acesse o recurso implantado.
 4. Selecione **Lançar estúdio** ou acesse [Azure Machine Learning studio](https://ml.azure.com) e faça login.
 
-## 2. Usar Machine Learning Automatizado para Treinar um Modelo
+## 2. 🤖 Usar Machine Learning Automatizado para Treinar um Modelo
 
 O machine learning automatizado permite testar múltiplos algoritmos e parâmetros para treinar vários modelos e identificar o melhor para seus dados.
 
-### Passos:
+### 📖 Passos:
 
 1. No Azure Machine Learning studio, acesse a página **Automated ML**.
 2. Crie um novo trabalho de ML automatizado com as seguintes configurações:
@@ -64,21 +64,21 @@ O machine learning automatizado permite testar múltiplos algoritmos e parâmetr
 
 7. Envie o trabalho de treinamento e aguarde a conclusão.
 
-## 3. Revisar o Melhor Modelo
+## 3. 📊 Revisar o Melhor Modelo
 
 Após a conclusão do trabalho de ML automatizado, revise o melhor modelo treinado.
 
-### Passos:
+### 📖 Passos:
 
 1. Na aba **Visão Geral** do trabalho de ML automatizado, observe o resumo do melhor modelo.
 2. Selecione o nome do algoritmo para ver os detalhes.
 3. Na aba **Métricas**, revise os gráficos de resíduos e valores previstos versus reais.
 
-## 4. Implantar e Testar o Modelo
+## 4. 🚀 Implantar e Testar o Modelo
 
 Implante o modelo usando um endpoint em tempo real.
 
-### Passos:
+### 📖 Passos:
 
 1. Na aba **Modelo** do melhor modelo, selecione **Implantar** e use a opção de endpoint em tempo real com as seguintes configurações:
    - Máquina virtual: `Standard_DS3_v2`
@@ -89,11 +89,11 @@ Implante o modelo usando um endpoint em tempo real.
 
 3. Para testar o serviço implantado, acesse a aba **Testar** do endpoint em tempo real e insira os dados de entrada no formato JSON fornecido.
 
-## 5. Limpeza
+## 5. 🧹 Limpeza
 
 Para evitar cobranças desnecessárias, exclua o endpoint e, se necessário, o workspace do Azure Machine Learning.
 
-### Passos:
+### 📖 Passos:
 
 1. No Azure Machine Learning studio, na aba **Endpoints**, selecione o endpoint e exclua-o.
 2. No portal do Azure, exclua o grupo de recursos associado ao workspace, se não for mais necessário.
